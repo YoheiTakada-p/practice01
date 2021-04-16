@@ -1,0 +1,8 @@
+dt {
+  font-weight: bold;
+}
+
+dl, dd {
+  margin: 0 24px 24px;
+  font-size: .9rem;
+}

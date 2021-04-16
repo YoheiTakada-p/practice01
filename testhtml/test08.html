@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <title>test07</title>
+  <meta charset="utf-8">
+  <style>
+    fieldset {
+      position: relative;
+    }
+
+    legend {
+      background-color: #999;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="">
+    <select name="fruits" id="" multiple>
+      <optgroup label="fruits">
+        <option>bananaaaaaaaaaaa</option>
+        <option selected>cherry</option>
+      </optgroup>
+    </select>
+    <input type="text" list="test">
+    <datalist id="test">
+      <option value="">apple</option>
+      <option value="">banana</option>
+    </datalist>
+    <section>
+      <fieldset>
+        <legend>fruits</legend>
+        <ul>
+          <li>
+            <label for="">banana</label>
+            <input type="radio" name="a">
+          </li>
+          <li>
+            <label for="">apple</label>
+            <input type="radio" name="a">
+          </li>
+        </ul>
+      </fieldset>
+    </section>
+    <button type="submit">go</button>
+  </form>
+</body>
+
+</html>

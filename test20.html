@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <title>test20</title>
+  <meta charset="utf-8">
+  <style>
+    body {
+      color: red;
+    }
+
+
+    .main {
+      color: rebeccapurple;
+      border: 2px solid #ccc;
+      padding: 1em;
+    }
+
+    .special {
+      color: black;
+      font-weight: bold;
+    }
+
+    blockquote {
+      background-color: aqua;
+      color: initial;
+    }
+
+    .fix {
+      all: unset;
+    }
+
+    p {
+      color: inherit;
+    }
+
+    .button li {
+      background-color: blue;
+    }
+
+    .button li:first-child:hover {
+      background-color: red;
+    }
+
+    .arrow_box {
+      position: relative;
+      background: #88b7d5;
+      border: 4px solid #c2e1f5;
+    }
+
+    .arrow_box:after,
+    .arrow_box:before {
+      bottom: 100%;
+      left: 50%;
+      border: solid transparent;
+      content: "";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    .arrow_box:after {
+      border-color: rgba(136, 183, 213, 0);
+      border-bottom-color: #88b7d5;
+      border-width: 30px;
+      margin-left: -30px;
+    }
+
+    .arrow_box:before {
+      border-color: rgba(194, 225, 245, 0);
+      border-bottom-color: #c2e1f5;
+      border-width: 36px;
+      margin-left: -36px;
+    }
+
+    .triangle {
+      display: block;
+      width: 0px;
+      height: 0px;
+      border-top: 20px solid transparent;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 20px solid yellow
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="main">
+    <li class="1">Item One</li>
+    <li>Item Two
+      <ul class="button">
+        <li>2.1</li>
+        <li>2.2</li>
+      </ul>
+    </li>
+    <li>ItemThree
+      <ul>
+        <li>3.1
+          <ul class="special">
+            <li>3.1.1</li>
+            <li>3.1.2</li>
+          </ul>
+        </li>
+        <li>3.2</li>
+      </ul>
+    </li>
+  </ul>
+  <blockquote>
+    <p>a</p>
+  </blockquote>
+  <blockquote class="fix">
+    <p>a</p>
+  </blockquote>
+  <blockquote>
+    <p>a</p>
+  </blockquote>
+  <div class="arrow_box">
+    <h1>arrow</h1>
+  </div>
+  <div class="triangle">
+    aa
+  </div>
+</body>
+
+</html>

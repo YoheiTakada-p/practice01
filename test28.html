@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test29</title>
+  <style>
+    /* specificity 1 */
+    body {
+      background-color: rgb(107, 102, 96);
+    }
+
+    /* specificity 1 */
+    article p {
+      min-height: 200px;
+      margin: 2em;
+      font-size: 2em;
+    }
+
+    /* specificity 1 */
+
+    section {
+      width: 800px;
+      background-color: antiquewhite;
+    }
+
+    /* specificity 1 */
+
+    header {
+      height: 142px;
+      background-image: url(./top-image.png);
+      border-top: 2px solid red;
+    }
+
+    /* specificity 1 */
+
+    footer {
+      height: 142px;
+      background-image: url(./bottom-image.png);
+      border-bottom: 2px solid red;
+    }
+
+    /* specificity 11 */
+
+    div.header-gradient {
+      height: inherit;
+      background-image: linear-gradient(to bottom, rgba(56, 56, 56, 0.2), rgba(255, 255, 255, 0));
+    }
+
+    /* specificity 11 */
+
+    div.footer-gradient {
+      height: inherit;
+      background-image: linear-gradient(to top, rgba(56, 56, 56, 0.2), rgba(255, 255, 255, 0));
+    }
+
+    /* specificity 3 */
+    footer div p {
+      float: right;
+      margin-right: 3em;
+      font-style: italic;
+    }
+
+    .logo {
+      position: relative;
+      padding: 4em;
+      filter: drop-shadow(5px 5px 5px #aaa);
+    }
+
+    .logo span {
+      position: absolute;
+      top: 6em;
+      left: 6em;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="gra">
+    <header>
+      <div class="header-gradient">
+        <div class="logo">
+          <img src="./logo.png" alt="">
+          <span>Awesome<br>
+            Company</span>
+        </div>
+      </div>
+    </header>
+    <article>
+      <p>a</p>
+    </article>
+    <footer>
+      <div class="footer-gradient">
+        <p>The Awesome Company<br>
+          102-112 Frail Bend Bride<br>
+          The Dwindlings<br>
+          Little Hornet<br>
+        </p>
+      </div>
+    </footer>
+  </section>
+</body>
+
+</html>

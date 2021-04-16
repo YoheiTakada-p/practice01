@@ -1,0 +1,52 @@
+header {
+  background-color: bisque;
+}
+
+nav {
+  background-color: antiquewhite;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  flex: 2;
+  display: flex;
+}
+
+nav li {
+  display: inline;
+  text-align: center;
+  flex: 1;
+}
+
+nav form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 2em;
+}
+
+nav input {
+  font-size: 1.6rem;
+  height: 32px;
+}
+
+main {
+  display: flex;
+}
+
+main article {
+  background-color: antiquewhite;
+  flex: 4;
+}
+
+main aside {
+  background-color: antiquewhite;
+  flex: 1;
+  margin-left: 10px;
+}
+
+footer {
+  background-color: antiquewhite;
+}

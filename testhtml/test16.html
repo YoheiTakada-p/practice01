@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <title>test15</title>
+  <meta charset="utf-8">
+  <style>
+    .select {
+      position: relative;
+      display: inline-block;
+    }
+
+    .select.active,
+    select:focus {
+      outline: none;
+      box-shadow: 0 0 3px 1px #227755;
+    }
+
+    .select .optList {
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+
+    .select .optList.hidden {
+      max-height: 0;
+      visibility: hidden;
+    }
+
+    .select .optList {
+      z-index: 2;
+      /* 選択肢のリストが下向き矢印より上になるよう、明示的に示します。*/
+
+      /* ul 要素のデフォルトスタイルを初期化します。*/
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      box-sizing: border-box;
+
+      /* 値の幅がコントロールの幅より小さい場合でも、選択肢のリストの幅が
+     コントロール自体と同じになるようにします。*/
+      min-width: 100%;
+
+      /* リストが長すぎる場合に、内容物が垂直方向にはみ出します (自動的に
+     垂直スクロールバーを表示します) が、水平方向にはみ出しません
+     (幅を指定しないため、リストは自身の幅へ自動的に調整されます。
+     それができない場合は、内容物が切り詰められます) 。*/
+      max-height: 10em;
+      /* 100px */
+      overflow-y: auto;
+      overflow-x: hidden;
+
+      border: .2em solid #000;
+      /* 2px */
+      border-top-width: .1em;
+      /* 1px */
+      border-radius: 0 0 .4em .4em;
+      /* 0 0 4px 4px */
+
+      box-shadow: 0 .2em .4em rgba(0, 0, 0, .4);
+      /* 0 2px 4px */
+      background: #f0f0f0;
+    }
+
+    .select:after {
+      content: "▼";
+      /* Unicode 文字 U+25BC を使用します。http://www.utf8-chartable.de をご覧ください */
+      position: absolute;
+      z-index: 1;
+      /* これは、矢印が選択肢のリストに重ならないようにするために重要です */
+      top: 0;
+      right: 0;
+
+      box-sizing: border-box;
+
+      height: 100%;
+      width: 2em;
+      padding-top: .1em;
+
+      border-left: .2em solid #000;
+      border-radius: 0 .1em .1em 0;
+
+      background-color: #000;
+      color: #FFF;
+      text-align: center;
+    }
+
+    .select .option {
+      padding: .2em .3em;
+      /* 2px 3px */
+    }
+
+    .select .highlight {
+      background: #000;
+      color: #FFFFFF;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="select" tabindex="0">
+    <span class="value">Cherry</span>
+    <ul class="optList">
+      <li class="option">Cherry</li>
+      <li class="option">Lemon</li>
+      <li class="option">Banana</li>
+      <li class="option">Strawberry</li>
+      <li class="option">Apple</li>
+    </ul>
+  </div>
+  <div>
+    <select name="" id="">
+      <option value="">Cherry</option>
+      <option class="option" value="">Lemon</option>
+      <option class="option" value="">Banana</option>
+      <option class="option" value="">Strawberry</option>
+      <option class="option" value="">Apple</option>
+    </select>
+  </div>
+</body>
+
+</html>

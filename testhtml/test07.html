@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <title>test07</title>
+  <meta charset="utf-8">
+  <style>
+    form {
+      margin: 0 auto;
+      width: 500px;
+      border: 1px solid #999;
+      border-radius: 1em;
+      padding: 1em;
+    }
+
+    label span {
+      display: inline-block;
+      width: 150px;
+      text-align: right;
+    }
+
+    input[type=radio] {
+      width: auto;
+    }
+
+    input {
+      font: 1em sans-serif;
+      width: 250px;
+    }
+
+    input:focus {
+      outline: #000;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    button {
+      margin: 20px 0 0 125px;
+      width: 250px;
+      border: 1px solid #999;
+      padding: 1em;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="">
+    <h1>Payment form</h1>
+    <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong> </p>
+    <section>
+      <h2>Contact information</h2>
+      <fieldset>
+        <legend>Title</legend>
+        <ul>
+          <li>
+            <label for="">
+              <input type="radio" name="title">
+              King
+            </label>
+          </li>
+          <li>
+            <label for="">
+              <input type="radio" name="title">
+              Queen
+            </label>
+          </li>
+          <li>
+            <label for="">
+              <input type="radio" name="title">
+              Joker
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <p>
+        <label for="">
+          <span>Name: </span>
+          <strong><abbr title="required">*</abbr></strong>
+        </label>
+        <input type="text">
+      </p>
+      <p>
+        <label for="">
+          <span>Password: </span>
+          <strong><abbr title="required">*</abbr></strong>
+        </label>
+        <input type="text">
+      </p>
+      <p>
+        <label for="">
+          <span>E-mail: </span>
+          <strong><abbr title="required">*</abbr></strong>
+        </label>
+        <input type="text">
+      </p>
+    </section>
+    <section>
+      <h2>Payment information</h2>
+      <p>
+        <label for="">
+          <span>Card type: </span>
+        </label>
+        <select name="" id="">
+          <option value="">Visa</option>
+          <option value="">Mastercard</option>
+          <option value="">American Express</option>
+        </select>
+      </p>
+      <p>
+        <label for="">
+          <span>Card number: </span>
+          <strong><abbr title="required">*</abbr></strong>
+        </label>
+        <input type="tel">
+      </p>
+      <p>
+        <label for="">
+          <span>Expiration date: </span>
+          <strong><abbr title="required">*</abbr></strong>
+        </label>
+        <input type="date">
+      </p>
+    </section>
+    <p>
+      <button type="submit">Validate the payment</button>
+    </p>
+  </form>
+</body>
+
+</html>

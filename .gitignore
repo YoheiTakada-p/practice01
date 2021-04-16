@@ -1,0 +1,5 @@
+# dataフォルダを含めない
+data/
+# ベーシック認証ファイルを含めない
+*.htaccess
+*.htpasswd

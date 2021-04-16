@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <title>test14</title>
+  <meta charset="utf-8">
+
+  <style>
+    input:invalid {
+      border: 2px dashed red;
+    }
+
+    input:invalid:required {
+      background-image: linear-gradient(to right, pink, lightgreen);
+    }
+
+    input:valid {
+      border: 2px solid black;
+    }
+
+    .error {
+      width: 100%;
+      padding: 0;
+
+      font-size: 80%;
+      color: white;
+      background-color: #900;
+      border-radius: 0 0 5px 5px;
+
+      box-sizing: border-box;
+    }
+
+    .error.active {
+      padding: 0.3em;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="" novalidate>
+    <!-- <div>
+      <label for="choose">banana or cherry?</label>
+      <input id="choose" type="choose" name="i_like" required pattern="[Bb]anana|[Cc]herry">
+    </div>
+    <div>
+      <label for="">how</label>
+      <input type="number" min="1" max="10">
+    </div> -->
+    <div>
+      <label for="">
+        <span>email</span>
+        <input type="email" id="mail" required minlength="8">
+        <span class="error" aria-live="polite"></span>
+      </label>
+    </div>
+    <button>submit</button>
+  </form>
+  <script>
+    const form = document.getElementsByTagName('form')[0];
+
+    const email = document.getElementById('mail');
+
+    const error = document.querySelector('#mail + span.error');
+
+    email.addEventListener("input", function (event) {
+      if (email.validity.valid) {
+        error.textContent = "";
+        error.className = "error";
+      } else {
+        showError();
+      }
+    })
+
+    // form.addEventListener("submit", function (event) {
+    //   // ユーザーがデータを送信しようとするたびに、メールアドレスの
+    //   // フィールドが妥当かをチェックします。
+    //   if (!email.validity.valid) {
+
+    //     // フィールドが妥当ではない場合、独自のエラーメッセージを
+    //     // 表示します。
+    //     showError();
+    //     // また、イベントをキャンセルしてフォームの送信を止めます。
+    //     event.preventDefault();
+    //   }
+    // });
+
+    function showError() {
+      if (email.validity.valueMissing) {
+        error.textContent = "空欄だよ！"
+      } else if (email.validity.typeMismatch) {
+        error.textContent = "これはメールじゃないね！"
+      } else if (email.validity.tooShort) {
+        error.textContent = `あと${email.minLength - email.value.length}文字いるよ`
+      }
+      error.className = "error active"
+    }
+    // const choose = document.getElementById("choose");
+
+    // choose.addEventListener("input", function (event) {
+    //   if (choose.validity.patternMismatch) {
+    //     choose.setCustomValidity("You choose banana or cherry!!")
+    //   }
+    // })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <title>test09</title>
+  <meta charset="utf-8">
+  <style>
+    @font-face {
+      font-family: 'handwriting';
+      src: url('fonts/journal-webfont.woff2') format('woff2'),
+        url('fonts/journal-webfont.woff2') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'typewriter';
+      src: url('fonts/veteran_typewriter-webfont.woff2') format('woff2'),
+        url('fonts/veteran_typewriter-webfont.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      font: 1.3rem sans-serif;
+      padding: 0.5em;
+      margin: 0;
+      background: #222;
+    }
+
+    form {
+      margin: 0 auto;
+      width: 740px;
+      height: 498px;
+      padding: 1em;
+      box-sizing: border-box;
+      background: #FFF url(background.jpg);
+
+      /* we create our grid */
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 10em 1em 1em 1em;
+      gap: 20px;
+    }
+
+    .message {
+      grid-row: 1 / 5;
+      grid-column: 1;
+    }
+
+    h1 {
+      font: 1em "typewriter", monospace;
+      align-self: end;
+    }
+
+    label {
+      font: 1em "typewriter", monospace;
+    }
+
+    input,
+    textarea {
+      font: 1.4em "handwriting", sans-serif;
+      border: none;
+      background: none;
+    }
+
+    button {
+      transform: rotate(-1.5deg);
+    }
+  </style>
+</head>
+<form action="">
+  <h1>to: Mozilla</h1>
+  <div class="form">
+    <label for="">from:</label>
+    <input type="text">
+  </div>
+  <div class="reply">
+    <label for="">reply:</label>
+    <input type="email">
+  </div>
+  <div class="message">
+    <label for="">Your message:</label>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+  </div>
+  <div>
+    <button type="submit">Send your message</button>
+  </div>
+</form>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <title>test18</title>
+  <meta charset="utf-8">
+  <style>
+    @import 'test18.css';
+
+    p+p {
+      background-color: blue;
+      color: red;
+    }
+
+    div {
+      background-color: red;
+    }
+
+    div>div {
+      background-color: aquamarine;
+      border: 1px solid #999;
+
+    }
+
+    @media (min-width: 600px) {
+      div {
+        background-color: yellow;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <p class="special">hello</p>
+  <div>
+    <div>hello</div>
+  </div>
+  <div>
+    <p>a</p>
+    <p>b</p>
+  </div>
+</body>
+
+</html>
